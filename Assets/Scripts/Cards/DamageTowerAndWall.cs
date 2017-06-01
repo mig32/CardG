@@ -1,5 +1,5 @@
 ﻿
-public class DamageTowerAndWall : CardInterfce
+public class DamageTowerAndWall : CardInterface
 {
     private int m_towerDmg;
     private int m_wallDmg;
@@ -12,8 +12,9 @@ public class DamageTowerAndWall : CardInterfce
         m_cost = cost;
     }
 
-    public override void Apply()
+    public override void Apply(Player me, Player opponent)
     {
-
+        opponent.DamageTower(m_towerDmg);
+        opponent.DamageWall(m_wallDmg);
     }
 }

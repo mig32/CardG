@@ -1,7 +1,7 @@
 ﻿
-public class ErrorCard : CardInterfce
+public class ErrorCard : CardInterface
 {
-    public override void Apply()
+    public override void Apply(Player me, Player opponent)
     {
 
     }

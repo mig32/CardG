@@ -3,10 +3,16 @@ using UnityEngine;
 
 public class CardsLibrary {
 
-    Dictionary<int, CardInterfce> m_library;
+    Dictionary<int, CardInterface> m_library;
+
+    CardsLibrary()
+    {
+        Init();
+    }
 
     void Init()
     {
+        m_library = new Dictionary<int, CardInterface>();
         m_library.Add(0, new DamageTowerAndWall(2, 4, 2));
         m_library.Add(0, new DamageTowerAndWall(5, 2, 4));
         m_library.Add(0, new DamageTowerAndWall(3, 3, 2));
@@ -18,21 +24,21 @@ public class CardsLibrary {
         m_library.Add(0, new DamageTowerAndWall(0, 8, 4));
     }
 
-    public List<int> CreateDeck(int cardsAmount)
+    public Stack<int> CreateDeck(int cardsAmount)
     {
         System.Random rnd = new System.Random();
-        List<int> ret = new List<int>();
+        Stack<int> ret = new Stack<int>();
         for (int i = 0; i < cardsAmount; i++)
         {
             int idx = rnd.Next(0, m_library.Count);
-            ret.Add(idx);
+            ret.Push(idx);
         }
         return ret;
     }
 
-    public CardInterfce GetCard(int idx)
+    public CardInterface GetCard(int idx)
     {
-        CardInterfce ret;
+        CardInterface ret;
         if (m_library.TryGetValue(idx, out ret))
         {
             return ret;
