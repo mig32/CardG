@@ -1,8 +1,8 @@
 ﻿
 public class ErrorCard : CardInterface
 {
-    public override void Apply(Player me, Player opponent)
+    public override bool Apply(Player me, Player opponent)
     {
-
+        return false;
     }
 }

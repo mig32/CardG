@@ -5,7 +5,7 @@ public class CardsLibrary {
 
     Dictionary<int, CardInterface> m_library;
 
-    CardsLibrary()
+    public CardsLibrary()
     {
         Init();
     }
@@ -14,14 +14,14 @@ public class CardsLibrary {
     {
         m_library = new Dictionary<int, CardInterface>();
         m_library.Add(0, new DamageTowerAndWall(2, 4, 2));
-        m_library.Add(0, new DamageTowerAndWall(5, 2, 4));
-        m_library.Add(0, new DamageTowerAndWall(3, 3, 2));
-        m_library.Add(0, new DamageTowerAndWall(2, 0, 1));
-        m_library.Add(0, new DamageTowerAndWall(4, 0, 2));
-        m_library.Add(0, new DamageTowerAndWall(0, 4, 2));
-        m_library.Add(0, new DamageTowerAndWall(6, 0, 3));
-        m_library.Add(0, new DamageTowerAndWall(2, 0, 1));
-        m_library.Add(0, new DamageTowerAndWall(0, 8, 4));
+        m_library.Add(1, new DamageTowerAndWall(5, 2, 4));
+        m_library.Add(2, new DamageTowerAndWall(3, 3, 2));
+        m_library.Add(3, new DamageTowerAndWall(2, 0, 1));
+        m_library.Add(4, new DamageTowerAndWall(4, 0, 2));
+        m_library.Add(5, new DamageTowerAndWall(0, 4, 2));
+        m_library.Add(6, new DamageTowerAndWall(6, 0, 3));
+        m_library.Add(7, new DamageTowerAndWall(2, 0, 1));
+        m_library.Add(8, new DamageTowerAndWall(0, 8, 4));
     }
 
     public Stack<int> CreateDeck(int cardsAmount)

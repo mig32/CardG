@@ -1,7 +1,5 @@
 ﻿
-public class CardInterface
+public abstract class CardInterface
 {
-	public virtual void Apply (Player me, Player opponent) {
-	    
-	}
+    public abstract bool Apply(Player me, Player opponent);
 }

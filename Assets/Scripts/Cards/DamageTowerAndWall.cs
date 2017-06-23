@@ -12,9 +12,14 @@ public class DamageTowerAndWall : CardInterface
         m_cost = cost;
     }
 
-    public override void Apply(Player me, Player opponent)
+    public override bool Apply(Player me, Player opponent)
     {
-        opponent.DamageTower(m_towerDmg);
-        opponent.DamageWall(m_wallDmg);
+        if (me.TryUseMana(m_cost))
+        {
+            opponent.DamageTower(m_towerDmg);
+            opponent.DamageWall(m_wallDmg);
+            return true;
+        }
+        return false;
     }
 }

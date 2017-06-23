@@ -17,7 +17,7 @@ public class Tower {
         int towerDmg = amount - m_wall;
         if (towerDmg < 0)
         {
-            m_wall = towerDmg;
+            m_wall = -towerDmg;
             return 0;
         }
 

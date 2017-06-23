@@ -11,7 +11,7 @@ public class Deck {
         m_deck = library.CreateDeck(m_deckSize);
     }
 	
-	public int PickCard()
+	public int Draw()
     {
         if (m_deck.Count > 0)
         {
