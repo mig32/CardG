@@ -22,6 +22,7 @@ public class CardsLibrary {
         m_library.Add(6, new DamageTowerAndWall(6, 0, 3));
         m_library.Add(7, new DamageTowerAndWall(2, 0, 1));
         m_library.Add(8, new DamageTowerAndWall(0, 8, 4));
+        m_library.Add(9, new DamagePlayer(6, 2));
     }
 
     public Stack<int> CreateDeck(int cardsAmount)
